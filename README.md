@@ -15,4 +15,4 @@ A simple web app to track your firearm collection.
 Manufacturer,Model,Caliber,SerialNumber,ImageURL,IsArchived,ArchiveNotes
 Smith & Wesson,Model 686,.357 Magnum,ABC123,,false,
 Glock,19,9mm,XYZ789,,true,Sold to John Doe
-``` 
+```
