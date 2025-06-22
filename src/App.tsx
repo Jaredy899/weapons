@@ -18,7 +18,7 @@ function App() {
             <div className="flex items-center gap-4">
               <ThemeToggle />
               <SignedIn>
-                <UserButton afterSignOutUrl="/" />
+                <UserButton />
               </SignedIn>
               <SignedOut>
                 <SignInButton mode="modal" />
@@ -27,11 +27,26 @@ function App() {
           </div>
         </header>
         <main className="container py-6">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/sign-in/*" element={<div>Sign In Page</div>} />
-            <Route path="/sign-up/*" element={<div>Sign Up Page</div>} />
-          </Routes>
+          <SignedIn>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+            </Routes>
+          </SignedIn>
+          <SignedOut>
+            <div className="flex flex-col items-center justify-center min-h-[60vh] text-center space-y-6">
+              <div className="space-y-2">
+                <h1 className="text-3xl font-bold">Welcome to Gun Inventory</h1>
+                <p className="text-muted-foreground max-w-md">
+                  Please sign in to access your firearm inventory and manage your collection.
+                </p>
+              </div>
+              <SignInButton mode="modal">
+                <button className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+                  Sign In to Continue
+                </button>
+              </SignInButton>
+            </div>
+          </SignedOut>
         </main>
       </div>
     </ThemeProvider>
