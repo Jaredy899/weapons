@@ -229,7 +229,7 @@ export default function HomePage() {
 
         {/* Gun Viewer Dialog */}
         <Dialog open={!!viewingGun} onOpenChange={(open) => !open && setViewingGun(null)}>
-          <DialogContent className="max-w-[95vw] sm:max-w-2xl md:max-w-4xl max-h-[90vh] overflow-y-auto p-4 sm:p-6">
+          <DialogContent className="bg-[hsl(var(--background))] max-w-[95vw] sm:max-w-2xl md:max-w-4xl max-h-[90vh] overflow-y-auto p-4 sm:p-6">
             {viewingGun && (
               <>
                 <DialogHeader className="space-y-2">
@@ -261,7 +261,7 @@ export default function HomePage() {
 
         {/* Full Size Image Dialog */}
         <Dialog open={!!fullSizeImage} onOpenChange={(open) => !open && setFullSizeImage(null)}>
-          <DialogContent className="max-w-[95vw] sm:max-w-4xl md:max-w-6xl p-0 overflow-hidden">
+          <DialogContent className="bg-[hsl(var(--background))] max-w-[95vw] sm:max-w-4xl md:max-w-6xl p-0 overflow-hidden">
             {fullSizeImage && (
               <img
                 src={fullSizeImage}

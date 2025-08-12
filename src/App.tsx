@@ -9,7 +9,7 @@ function App() {
     <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
       <div className="min-h-screen bg-background font-sans antialiased">
         <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-          <div className="container flex h-14 items-center justify-between">
+          <div className="container mx-auto flex h-14 items-center justify-between">
             <div className="flex items-center">
               <a className="mr-6 flex items-center space-x-2" href="/">
                 <span className="font-bold">Gun Inventory</span>
@@ -26,7 +26,7 @@ function App() {
             </div>
           </div>
         </header>
-        <main className="container py-6">
+        <main className="container mx-auto py-6">
           <SignedIn>
             <Routes>
               <Route path="/" element={<HomePage />} />
