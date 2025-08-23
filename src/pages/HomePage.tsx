@@ -120,7 +120,7 @@ export default function HomePage() {
                           {filteredActiveGuns.map((gun) => (
                             <TableRow
                               key={`${gun.manufacturer}-${gun.model}-${gun.serialNumber}`}
-                              className="cursor-pointer hover:bg-muted/50 active:bg-muted"
+                              className="cursor-pointer"
                               onClick={() => setViewingGun(gun)}
                             >
                               <TableCell className="text-xs sm:text-sm px-2 sm:px-4 font-medium">
@@ -189,7 +189,7 @@ export default function HomePage() {
                           {filteredArchivedGuns.map((gun) => (
                             <TableRow
                               key={`${gun.manufacturer}-${gun.model}-${gun.serialNumber}`}
-                              className="cursor-pointer hover:bg-muted/50 active:bg-muted"
+                              className="cursor-pointer"
                               onClick={() => setViewingGun(gun)}
                             >
                               <TableCell className="text-xs sm:text-sm px-2 sm:px-4 font-medium">

@@ -102,6 +102,29 @@
     outline-offset: 2px;
   }
 
+  /* Gun table row reactivity */
+  tr[class*="cursor-pointer"] {
+    border: 1px solid hsl(var(--border));
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  tr[class*="cursor-pointer"]:hover {
+    border-color: hsl(var(--ring));
+    background-color: hsl(var(--accent));
+    transform: translateY(-1px);
+  }
+
+  tr[class*="cursor-pointer"]:active {
+    transform: translateY(0);
+    transition-duration: 0.1s;
+  }
+
+  tr[class*="cursor-pointer"]:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+
   /* Tab button reactivity */
   [data-radix-tabs-trigger] {
     border: 1px solid hsl(var(--border));
