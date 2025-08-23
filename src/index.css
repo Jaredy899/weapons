@@ -75,3 +75,53 @@
     color: hsl(var(--foreground));
   }
 }
+
+@layer components {
+  /* Reactive button styling */
+  button[class*="inline-flex"] {
+    border: 1px solid hsl(var(--border));
+    min-height: 2.5rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  button[class*="inline-flex"]:hover {
+    border-color: hsl(var(--ring));
+    background-color: hsl(var(--accent));
+    transform: translateY(-1px);
+  }
+
+  button[class*="inline-flex"]:active {
+    transform: translateY(0);
+    transition-duration: 0.1s;
+  }
+
+  button[class*="inline-flex"]:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+
+  /* Tab button reactivity */
+  [data-radix-tabs-trigger] {
+    border: 1px solid hsl(var(--border));
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  [data-radix-tabs-trigger]:hover {
+    background-color: hsl(var(--accent));
+    border-color: hsl(var(--ring));
+  }
+
+  [data-radix-tabs-trigger][data-state="active"] {
+    border-color: hsl(var(--ring));
+    background-color: hsl(var(--background));
+    font-weight: 500;
+  }
+
+  [data-radix-tabs-trigger]:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+}
